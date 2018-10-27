@@ -87,7 +87,7 @@ function promptUser(){
             item_id: answer.id
         }, function(err, res){
             if (itemQuantity > res[0].stock_quantity){
-                console.log("You are unable to purchase that amount");
+                console.log("Insufficient quantity");
                 promptUser();
             }
             else{
