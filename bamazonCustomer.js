@@ -60,8 +60,8 @@ function promptUser(){
             type: "input",
             message: "Enter the ID number of the item you would like to purchase",
             validate: function(value){
-                if (value <= 0 || isNaN(value)){
-                    console.log("Please enter a valid ID number")
+                if (value <= 0 || value > 10 || isNaN(value)){
+                    console.log("\nPlease enter a valid ID number\n")
                 } else {
                     return true;
                 }
@@ -93,8 +93,8 @@ function promptUser(){
             else{
                 console.log("Your purchase will go through");
             }
-            checkout();
-        });
+        checkout();
+        });    
     });
 }
 
